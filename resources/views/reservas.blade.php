@@ -13,6 +13,7 @@
     <div class="panel-heading">
         <div class="btn-group pull-right">
             <a href="{{ route('json.show') }}" target="_blank" class="btn btn-default btn-sm">show JSON</a>
+            <a href="{{ route('json.download') }}" target="_blank" class="btn btn-default btn-sm">download JSON</a>
         </div>
         <h4>Listado Reservas</h4>
     </div>

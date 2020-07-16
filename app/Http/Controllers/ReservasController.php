@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Services\CsvService;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class ReservasController extends Controller
 {
@@ -95,4 +96,13 @@ class ReservasController extends Controller
         die($reservas_collection);
 
     }
+
+    public function downloadJSON(){
+
+        $reservas_collection = $this->CsvService->getCsvData();
+        $fileName = time() . '_reservas.json';
+        Storage::disk('local')->put('/reservas/json/'.$fileName, json_encode($reservas_collection));
+        return Storage::download('/reservas/json/'.$fileName);
+    
+      }
 }
