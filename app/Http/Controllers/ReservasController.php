@@ -87,7 +87,7 @@ class ReservasController extends Controller
      
     }
 
-    function downloadJSON(){
+    function showJSON(){
 
         $reservas_collection = $this->CsvService->getCsvData();
         $reservas_json = json_encode( $reservas_collection, JSON_PRETTY_PRINT );

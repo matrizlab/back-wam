@@ -21,4 +21,4 @@ Route::get('/','ReservasController@index');
 
 Route::get('/search','ReservasController@action')->name('search.action');
 
-Route::get('/download','ReservasController@downloadJSON')->name('json.download');
+Route::get('/show','ReservasController@showJSON')->name('json.show');
