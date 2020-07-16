@@ -12,7 +12,7 @@
    <div class="panel panel-default">
     <div class="panel-heading">
         <div class="btn-group pull-right">
-            <a href="#" target="_blank" class="btn btn-default btn-sm">JSON</a>
+            <a href="{{ route('json.download') }}" target="_blank" class="btn btn-default btn-sm">download JSON</a>
         </div>
         <h4>Listado Reservas</h4>
     </div>

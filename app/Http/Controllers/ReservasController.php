@@ -86,4 +86,13 @@ class ReservasController extends Controller
         }
      
     }
+
+    function downloadJSON(){
+
+        $reservas_collection = $this->CsvService->getCsvData();
+        $reservas_json = json_encode( $reservas_collection, JSON_PRETTY_PRINT );
+        header('Content-Type: application/json; charset="uft-8"');
+        die($reservas_collection);
+
+    }
 }
