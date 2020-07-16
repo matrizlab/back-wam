@@ -18,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/','ReservasController@index');
+
+Route::get('/search','ReservasController@action')->name('search.action');
